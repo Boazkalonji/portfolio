@@ -1,0 +1,682 @@
+/* Palette Globale & Core Styles */
+body {
+    background-color: #0b0f19;
+    color: #cbd5e1;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Gestion du padding-top adaptatif pour éviter que le menu cache le titre */
+.content-wrapper {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+@media (min-gradient: 992px) {
+    .content-wrapper {
+        padding-top: 40px;
+    }
+}
+
+/* Bannière & Grille Artistique / Tech */
+.hero-banner {
+    position: relative;
+    background-color: #0b0f19;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center center;
+}
+
+/* Halos Lumineux d'ambiance */
+.glow-effect-1, .glow-effect-2 {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+}
+.glow-effect-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(34, 211, 238, 0.12);
+    top: 10%;
+    left: 5%;
+}
+.glow-effect-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(59, 130, 246, 0.08);
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Typographies Responsives */
+.hero-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+.hero-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+/* Ajustements typographiques pour grands écrans (PC) */
+@media (min-width: 992px) {
+    .hero-title { font-size: 3.75rem; }
+    .hero-subtitle { font-size: 1.6rem; }
+    .hero-text { font-size: 1.1rem; }
+}
+
+/* Badge Créatif */
+.badge-creative {
+    background: rgba(34, 211, 238, 0.06);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Navbar Premium Floue */
+.bg-dark-custom {
+    background-color: rgba(11, 15, 25, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.border-slate {
+    border-color: rgba(30, 41, 59, 0.7) !important;
+}
+
+/* Boutons */
+.btn-cyan {
+    background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+    color: #0b0f19;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-cyan:hover {
+    color: #0b0f19;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 211, 238, 0.3);
+}
+.btn-outline-slate {
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    background-color: rgba(30, 41, 59, 0.2);
+    transition: all 0.2s;
+}
+.btn-outline-slate:hover {
+    color: #22d3ee;
+    border-color: #22d3ee;
+    background-color: rgba(34, 211, 238, 0.04);
+}
+
+/* COMPOSITION GRAPHIQUE MIXTE (DESIGN / CODE / ARCHI) */
+.graphic-composition {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 576px) {
+    .graphic-composition {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+/* Cercle de verre central (Inspiration UI/UX) */
+.main-circle-glass {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+    flex-direction: column; 
+  
+}
+@media (min-width: 576px) {
+    .main-circle-glass { width: 240px; height: 240px; }
+}
+
+.inner-icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(11, 15, 25, 0.6);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+.circle-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #94a3b8;
+}
+
+/* Badges Flottants */
+.floating-badge {
+    position: absolute;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 1.1rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.badge-design {
+    top: 15%;
+    right: -5%;
+    animation: float-reverse 5s ease-in-out infinite;
+}
+.badge-code {
+    bottom: 15%;
+    left: -5%;
+    animation: float 7s ease-in-out infinite;
+}
+
+/* Couleurs spécifiques icônes */
+.text-pink { color: #f43f5e; }
+.text-blue { color: #3b82f6; }
+
+/* Repères d'architecture (Lignes abstraites en arrière-plan) */
+.geo-line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+.line-x {
+    width: 120%;
+    height: 1px;
+    top: 50%;
+    left: -10%;
+}
+.line-y {
+    width: 1px;
+    height: 120%;
+    left: 50%;
+    top: -10%;
+}
+.abstract-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #22d3ee;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 10px #22d3ee;
+}
+
+/* Animations de flottement fluide */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+@keyframes float-reverse {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(12px); }
+}
+
+/* Style Global des Nav-Links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #22d3ee !important;
+}
+
+
+/* Bordure discrète de séparation */
+.border-slate-discret {
+    border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Micro-chiffres */
+.esthetique-xs {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+}
+
+/* Badges technologiques (Tech Pills) */
+.tech-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.4rem 0.9rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-family: monospace;
+    transition: all 0.2s ease;
+}
+.tech-pill:hover {
+    background: rgba(34, 211, 238, 0.05);
+    border-color: rgba(34, 211, 238, 0.2);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Indicateur de Scroll Animé */
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+.mouse-wheel {
+    width: 20px;
+    height: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+}
+.mouse-wheel::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background-color: #22d3ee;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-anim 1.6s infinite ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+/* --- AMÉLIORATION DU CONTRASTE & NETTETÉ --- */
+.text-white-70 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+.text-light-smooth {
+    color: #f1f5f9 !important;
+}
+.micro-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* --- DESIGN DES NOUVELLES CARTES DE COMPOSITION --- */
+.bg-glass-card {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.bg-glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, 0.25) !important;
+}
+.highlight-card {
+    border-left: 3px solid #22d3ee !important;
+}
+
+/* --- STYLE DES MICRO-AVATARS D'ICÔNES --- */
+.icon-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+.bg-cyan-dim { background: rgba(34, 211, 238, 0.1); }
+.bg-pink-dim { background: rgba(244, 63, 94, 0.1); }
+.bg-purple-dim { background: rgba(168, 85, 247, 0.1); }
+.text-purple { color: #a855f7; }
+.bg-dark-slate { background: rgba(30, 41, 59, 0.6); }
+
+/* --- LIENS FLÈCHES --- */
+.arrow-link {
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+.arrow-link:hover {
+    color: #22d3ee !important;
+}
+
+
+
+
+@keyframes scroll-anim {
+    0% { top: 6px; opacity: 1; }
+    50% { top: 14px; opacity: 0.3; }
+    100% { top: 6px; opacity: 1; }
+}
+
+
+/* Style du bandeau Campus France */
+.bg-academic-banner {
+    background: linear-gradient(90deg, rgba(34, 211, 238, 0.04) 0%, rgba(59, 130, 246, 0.01) 100%);
+}
+.border-cyan-dim {
+    border-color: rgba(34, 211, 238, 0.15) !important;
+}
+.academic-badge {
+    width: 42px;
+    height: 42px;
+    background: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+.social-proof-link {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-proof-link:hover {
+    color: #22d3ee !important;
+    transform: scale(1.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================== */
+/* STYLES SECTION À PROPOS                    */
+/* ========================================== */
+.section-about {
+    background-color: #0b0f19; /* Fond sombre cohérent */
+}
+
+.line-decoder {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    border-radius: 2px;
+}
+
+.bg-glass-card-about {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.step-num {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+    background: rgba(34, 211, 238, 0.1);
+    padding: 6px 10px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.about-text-wrapper p {
+    line-height: 1.7;
+}
+
+
+
+/* Correction de l'indicateur de défilement */
+.scroll-trigger-wrapper {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.scroll-indicator-clean {
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    transition: border-color 0.2s ease;
+}
+
+.scroll-indicator-clean:hover {
+    border-color: #22d3ee;
+}
+
+
+
+
+
+/* ========================================== */
+/* STYLES SECTION COMPÉTENCES                 */
+/* ========================================== */
+.section-skills {
+    background-color: #0b0f19; /* Conserver le même fond sombre */
+}
+
+.icon-box-skill {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+/* Cartes de compétences */
+.skill-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(30, 41, 59, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(34, 211, 238, 0.3) !important;
+    box-shadow: 0 10px 30px -15px rgba(34, 211, 238, 0.15);
+}
+
+/* Mise en valeur subtile de la carte Dev (Milieu) */
+.highlight-skill-card {
+    border-color: rgba(168, 85, 247, 0.2) !important;
+}
+.highlight-skill-card:hover {
+    border-color: rgba(168, 85, 247, 0.4) !important;
+    box-shadow: 0 10px 30px -15px rgba(168, 85, 247, 0.2);
+}
+
+/* Badges / Tags de compétences */
+.skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-family: var(--bs-font-monospace);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(34, 211, 238, 0.1);
+    border-color: rgba(34, 211, 238, 0.4);
+    color: #22d3ee;
+}
+
+.tag-backend:hover {
+    background: rgba(168, 85, 247, 0.1);
+    border-color: rgba(168, 85, 247, 0.4);
+    color: #a855f7;
+}
+
+
+
+
+
+
+/* ========================================== */
+/* STYLES SECTION PROJETS                     */
+/* ========================================== */
+.section-projects {
+    background-color: #0b0f19;
+}
+
+.project-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: rgba(30, 41, 59, 0.15);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, 0.25) !important;
+}
+
+.academic-details-box {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.project-badge-top {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    font-family: var(--bs-font-monospace);
+    text-uppercase: uppercase;
+    background: rgba(34, 211, 238, 0.1);
+    color: #22d3ee;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.btn-outline-cyan {
+    color: #22d3ee;
+    border-color: rgba(34, 211, 238, 0.4);
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-cyan:hover {
+    background: #22d3ee;
+    color: #0b0f19;
+    border-color: #22d3ee;
+}
+
+.border-pink-dim {
+    border-color: rgba(244, 63, 94, 0.2) !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================== */
+/* STYLES SECTION CONTACT & FOOTER            */
+/* ========================================== */
+.section-contact {
+    background-color: #0b0f19;
+}
+
+.text-white-70 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white-30 {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    background-color: #070a12;
+}
+
+
+
+
+
+
+
+
+
+.micro-text {
+    font-size: 0.75rem;
+}
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+}
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
